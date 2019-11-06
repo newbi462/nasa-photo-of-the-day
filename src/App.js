@@ -4,7 +4,7 @@ import "./App.css";
 
 
 import MakeCard from "./MakeCard";
-
+import BackButton from "./BackButton";
 
 function App() {
   //
@@ -25,13 +25,15 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={()=> setPage(page + 1)}>Next 25</button>
+      <h1>Welsome To Mars</h1>
+      <BackButton page={page} setPage={setPage} />
+      <button onClick={() => setPage(page + 1)}>Next 25</button>
       {/*<p>
         Read through the instructions in the README.md file to build your NASA
         app! Have fun 🚀! Still
       </p>*/}
       <div>
-      <MakeCard propsName={apiData}/>
+      <MakeCard propsName={apiData} />
       </div>
     </div>
   );
