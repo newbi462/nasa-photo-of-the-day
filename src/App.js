@@ -1,10 +1,19 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
+import styled from "styled-components";
+
 import "./App.css";
 
 
 import MakeCard from "./MakeCard";
 import BackButton from "./BackButton";
+
+
+const ForceFlex = styled.div`
+  display: flex
+  flex-flow: row wrap;
+
+`;
 
 function App() {
   //
@@ -32,9 +41,11 @@ function App() {
         Read through the instructions in the README.md file to build your NASA
         app! Have fun 🚀! Still
       </p>*/}
-      <div>
-      <MakeCard propsName={apiData} />
-      </div>
+      <ForceFlex>
+        <>
+        <MakeCard propsName={apiData} />
+        </>
+      </ForceFlex>
     </div>
   );
 }

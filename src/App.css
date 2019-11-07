@@ -31,3 +31,12 @@
     transform: rotate(360deg);
   }
 }
+
+/*CUSTOM CSS*/
+.card {
+  width: 32%;
+}
+
+.card img {
+  width: 100%;
+}
