@@ -12,7 +12,21 @@ import BackButton from "./BackButton";
 const ForceFlex = styled.div`
   display: flex
   flex-flow: row wrap;
+  justify-content: space-around;
+`;
+const StyleButton = styled.div`
+  background: pink;
+  color: white
+  width: 45%;
+  padding: 8px 25px;
+  border-radius: 8px;
+  border: solid 1px pink;
 
+  &:hover {
+    color: purple;
+    border: solid 1px purple;
+    background: white;
+  }
 `;
 
 function App() {
@@ -35,8 +49,11 @@ function App() {
   return (
     <div className="App">
       <h1>Welsome To Mars</h1>
-      <BackButton page={page} setPage={setPage} />
-      <button onClick={() => setPage(page + 1)}>Next 25</button>
+
+      <ForceFlex>
+        <BackButton page={page} setPage={setPage} />
+        <StyleButton onClick={() => setPage(page + 1)}>Next 25</StyleButton>
+      </ForceFlex>
       {/*<p>
         Read through the instructions in the README.md file to build your NASA
         app! Have fun 🚀! Still
@@ -45,6 +62,11 @@ function App() {
         <>
         <MakeCard propsName={apiData} />
         </>
+      </ForceFlex>
+
+      <ForceFlex>
+        <BackButton page={page} setPage={setPage} />
+        <StyleButton onClick={() => setPage(page + 1)}>Next 25</StyleButton>
       </ForceFlex>
     </div>
   );
